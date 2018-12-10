@@ -1,0 +1,131 @@
+
+John@Johnt MINGW64 /d/Arbejde/git (master)
+$ git config --global user.name "Thystrup"
+
+John@Johnt MINGW64 /d/Arbejde/git (master)
+$ git config --global user.email "johnt@johnt.dk"
+
+John@Johnt MINGW64 /d/Arbejde/git (master)
+$ mkdir git-work-flow
+
+John@Johnt MINGW64 /d/Arbejde/git (master)
+$ dir
+git-work-flow
+
+John@Johnt MINGW64 /d/Arbejde/git (master)
+$ cd git-work-flow
+
+John@Johnt MINGW64 /d/Arbejde/git/git-work-flow (master)
+$ git init .
+Initialized empty Git repository in D:/Arbejde/git/git-work-flow/.git/
+
+John@Johnt MINGW64 /d/Arbejde/git/git-work-flow (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        readme.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+John@Johnt MINGW64 /d/Arbejde/git/git-work-flow (master)
+$ ^C
+
+John@Johnt MINGW64 /d/Arbejde/git/git-work-flow (master)
+$ git add readme.md
+
+John@Johnt MINGW64 /d/Arbejde/git/git-work-flow (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   readme.md
+
+
+John@Johnt MINGW64 /d/Arbejde/git/git-work-flow (master)
+$ git commit -m "created our first readme"
+[master (root-commit) 0903089] created our first readme
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 readme.md
+
+John@Johnt MINGW64 /d/Arbejde/git/git-work-flow (master)
+$ git log
+commit 0903089fb35ad124394abb1480afe15127537fa8 (HEAD -> master)
+Author: Thystrup <johnt@johnt.dk>
+Date:   Mon Dec 10 12:11:59 2018 +0100
+
+    created our first readme
+
+John@Johnt MINGW64 /d/Arbejde/git/git-work-flow (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   readme.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+John@Johnt MINGW64 /d/Arbejde/git/git-work-flow (master)
+$ git diff readme.md
+diff --git a/readme.md b/readme.md
+index e69de29..00f3f29 100644
+--- a/readme.md
++++ b/readme.md
+@@ -0,0 +1 @@
++# ingen l<E6>ser dette
+\ No newline at end of file
+
+John@Johnt MINGW64 /d/Arbejde/git/git-work-flow (master)
+$ git add readme.md
+
+John@Johnt MINGW64 /d/Arbejde/git/git-work-flow (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   readme.md
+
+
+John@Johnt MINGW64 /d/Arbejde/git/git-work-flow (master)
+$ log
+bash: log: command not found
+
+John@Johnt MINGW64 /d/Arbejde/git/git-work-flow (master)
+$ git log
+commit 0903089fb35ad124394abb1480afe15127537fa8 (HEAD -> master)
+Author: Thystrup <johnt@johnt.dk>
+Date:   Mon Dec 10 12:11:59 2018 +0100
+
+    created our first readme
+
+John@Johnt MINGW64 /d/Arbejde/git/git-work-flow (master)
+$ git commit -m "ny"
+[master 85e0be5] ny
+ 1 file changed, 1 insertion(+)
+
+John@Johnt MINGW64 /d/Arbejde/git/git-work-flow (master)
+$ git log
+commit 85e0be56ccec018fbf7e1cfff9cc3a0a5bca43bd (HEAD -> master)
+Author: Thystrup <johnt@johnt.dk>
+Date:   Mon Dec 10 12:17:56 2018 +0100
+
+    ny
+
+commit 0903089fb35ad124394abb1480afe15127537fa8
+Author: Thystrup <johnt@johnt.dk>
+Date:   Mon Dec 10 12:11:59 2018 +0100
+
+    created our first readme
+
+John@Johnt MINGW64 /d/Arbejde/git/git-work-flow (master)
